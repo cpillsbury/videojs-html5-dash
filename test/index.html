@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Video.js Html5 Dash</title>
+  <link rel="stylesheet" href="../node_modules/qunitjs/qunit/qunit.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="../node_modules/qunitjs/qunit/qunit.js"></script>
+  <script>
+    test('the environment is sane', function() {
+      ok(true, 'everything is swell');
+    });
+  </script>
+
+  <!-- TODO: Eventually remove. Also figure out best way to include non-node module 3rd party libs if needed-->
+  <script src="../lib/vendor/xml2json.js"></script>
+  <!--<script src="node_modules/video.js/dist/video-js/video.js"></script>-->
+  <!-- Set the root of the video.js source files -->
+  <script>
+      projectRoot = '../../heff-video.js/';
+  </script>
+  <script src="../../heff-video.js/build/source-loader.js"></script>
+  <script src="../lib/videojs-html5-dash.js"></script>
+  <script src="videojs-html5-dash.test.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Video.js Html5 Dash</title>
+
+    <link href="node_modules/video.js/dist/video-js/video-js.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .info {
+            background-color: #eee;
+            border: thin solid #333;
+            border-radius: 3px;
+            padding: 0 5px;
+            text-align: center;
+        }
+        .video-js {
+            margin: 40px auto;
+        }
+    </style>
+
+    <!-- TODO: Currently need to use forked version of videojs that includes sourceHandler changes -->
+    <!--<script src="node_modules/video.js/dist/video-js/video.js"></script>-->
+    <!-- Set the root of the video.js source files -->
+    <script>
+        projectRoot = '../heff-video.js/';
+    </script>
+    <script src="../heff-video.js/build/source-loader.js"></script>
+    <!-- TODO: Eventually remove. Also figure out best way to include non-node module 3rd party libs if needed-->
+    <script src="dist/videojs-html5-dash.js"></script>
+</head>
+<body>
+<div class="info">
+    <p>
+        You can see the Video.js Html5 Dash plugin in action below.
+        Look at the source of this page to see how to use it with your videos.
+    </p>
+</div>
+<video id="vid1" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264" data-setup='{}'>
+    <p>
+        Your browser doesn't support video. Please <a href="http://browsehappy.com/">upgrade your browser</a> to see the example.
+    </p>
+    <source src="http://dash.edgesuite.net/envivio/dashpr/clear/Manifest.mpd" type='application/dash+xml'>
+</video>
+</body>
+</html>
