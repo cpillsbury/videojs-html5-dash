@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: 'lib/**/*.js',
+        src: ['lib/html5Dash/xmlfun.js', 'lib/**/*.js'],
         dest: 'dist/<%= pkg.name %>.js'
       }
     },

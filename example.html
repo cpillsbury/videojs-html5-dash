@@ -22,7 +22,9 @@
         }
     </style>
 
-    <!-- TODO: Currently need to use forked version of videojs that includes sourceHandler changes -->
+    <!-- TODO: Currently need to use forked version of videojs that includes sourceHandler changes
+     Change Dependency on vjs to heff repo
+    -->
     <!--<script src="node_modules/video.js/dist/video-js/video.js"></script>-->
     <!-- Set the root of the video.js source files -->
     <script>
@@ -30,6 +32,8 @@
     </script>
     <script src="../heff-video.js/build/source-loader.js"></script>
     <!-- TODO: Eventually remove. Also figure out best way to include non-node module 3rd party libs if needed-->
+    <!-- TODO: FIGURE OUT WAY TO EXPLICITLY DEFINE CONCAT ORDER -->
+    <!--<script src="lib/html5Dash/xmlfun.js"></script>-->
     <script src="dist/videojs-html5-dash.js"></script>
 </head>
 <body>
@@ -42,8 +46,19 @@
 <video id="vid1" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264" data-setup='{}'>
     <p>
         Your browser doesn't support video. Please <a href="http://browsehappy.com/">upgrade your browser</a> to see the example.
-    </p>
-    <source src="http://dash.edgesuite.net/envivio/dashpr/clear/Manifest.mpd" type='application/dash+xml'>
+    </p>http://dash.brightcove.com/assets/nine-3/M030KHWA1/dash/stream.mpd
+    <!-- "AUDIO TYPE NOT SUPPORTED" -->
+    <!--<source src="http://dash.edgesuite.net/dash264/TestCases/1b/qualcomm/1/MultiRate.mpd" type='application/dash+xml'>-->
+
+    <!-- WORKING AUDIO & VIDEO -->
+
+    <!-- SEGMENT LIST CATEGORY: Segment Template -->
+    <!--<source src="http://dash.edgesuite.net/envivio/dashpr/clear/Manifest.mpd" type='application/dash+xml'>-->
+    <!--<source src="http://dash.brightcove.com/assets/shiv/fire_template_5/stream.mpd" type='application/dash+xml'>-->
+    <!--<source src="http://dash.brightcove.com/assets/nine-3/M030KHWA1/dash/stream.mpd" type='application/dash+xml'>-->
+    <!--<source src="http://dash.brightcove.com/assets/nine-3/BLOCFF14_19_A/dash/stream.mpd" type='application/dash+xml'>-->
+    <!--<source src="http://dash.brightcove.com/assets/nine-3/WHWA14_946_A/dash/stream.mpd" type='application/dash+xml'>-->
+    <source src="http://dash.brightcove.com/assets/seven-3/Aami_Ad_final/dash/stream.mpd" type='application/dash+xml'>
 </video>
 </body>
 </html>
